@@ -13,11 +13,11 @@ VENV=$(CURDIR)/debian/venv
 
 CHANGELOG_VERSION=$(shell dpkg-parsechangelog | sed -n 's/^Version: //p')
 
-override_dh_auto_clean: clean_tcllauncher clean_dump1090 clean_mlat-client clean_venv clean_piaware
+override_dh_auto_clean: clean_tcllauncher clean_mlat-client clean_venv clean_piaware
 
 override_dh_auto_configure: check_versions configure_tcllauncher
 
-override_dh_auto_build: build_tcllauncher build_dump1090 setup_venv build_cxfreeze build_mlat-client
+override_dh_auto_build: build_tcllauncher setup_venv build_cxfreeze build_mlat-client
 
 override_dh_auto_install: install_tcllauncher install_dump1090 install_mlat-client install_piaware
 
@@ -43,12 +43,9 @@ check_versions:
 configure_tcllauncher:
 	cd tcllauncher && autoconf -f && ./configure --with-tcl=/usr/lib/tcl8.6
 
-build_dump1090:
-	make -C dump1090 RTLSDR=no BLADERF=no DUMP1090_VERSION="piaware-$(CHANGELOG_VERSION)" faup1090
-
 install_dump1090:
 	install -d $(CURDIR)/debian/piaware/usr/lib/piaware/helpers
-	install -t $(CURDIR)/debian/piaware/usr/lib/piaware/helpers dump1090/faup1090
+	ln -sf /usr/local/bin/faup1090 $(CURDIR)/debian/piaware/usr/lib/piaware/helpers/faup1090
 
 setup_venv:
 	pyvenv $(VENV) --without-pip
