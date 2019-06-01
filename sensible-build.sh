@@ -54,7 +54,7 @@ clone_or_update https://github.com/paulyc/piaware.git v3.6.3 $OUTDIR/piaware
 
 clone_or_update https://github.com/flightaware/tcllauncher.git v1.8 $OUTDIR/tcllauncher
 
-clone_or_update https://github.com/paulyc/dump1090.git v3.6.3 $OUTDIR/dump1090
+clone_or_update https://github.com/paulyc/dump1090.git lib1090-0.4 $OUTDIR/dump1090
 
 clone_or_update https://github.com/paulyc/mlat-client.git v0.2.10 $OUTDIR/mlat-client
 
