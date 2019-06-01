@@ -123,9 +123,6 @@ EOF
             # strip out mlat-forwarding configurations
             update_mlat_config
         fi
-
-        echo "Reloading rsyslog configuration.." >&2
-        invoke-rc.d rsyslog force-reload || echo "Warning: rsyslog failed to reload"
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
