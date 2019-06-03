@@ -6,3 +6,5 @@ piaware*.dsc
 piaware*.build
 package-jessie
 package-wheezy
+package-stretch
+piaware_3.6.3_armhf.buildinfo
