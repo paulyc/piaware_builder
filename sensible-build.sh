@@ -50,9 +50,9 @@ fi
 
 mkdir -p $OUTDIR
 
-clone_or_update https://github.com/paulyc/piaware master $OUTDIR/piaware
+clone_or_update https://github.com/paulyc/piaware.git master $OUTDIR/piaware
 
-clone_or_update https://github.com/flightaware/tcllauncher.git v1.8 $OUTDIR/tcllauncher
+clone_or_update https://github.com/paulyc/tcllauncher.git master $OUTDIR/tcllauncher
 
 clone_or_update https://github.com/paulyc/mlat-client.git master $OUTDIR/mlat-client
 
