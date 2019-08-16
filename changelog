@@ -1,3 +1,26 @@
+piaware (3.7.1) stable; urgency=medium
+
+  * Fix gpsd bug
+  * Add Mode S/UAT program status in status.json
+  * Add support for separate Mode S and UAT radio indicators
+
+ -- Eric Tran <eric.tran@flightaware.com>  Fri, 03 May 2019 01:43:00 -6000
+
+piaware (3.7.0.1) stable; urgency=medium
+
+  * Fix MLAT connect parameters
+
+ -- Eric Tran <eric.tran@flightaware.com>  Wed, 03 Apr 2019 11:06:00 -6000
+
+piaware (3.7.0) stable; urgency=medium
+
+  * Support for 978MHz UAT ADS-B via dump978-fa
+  * Add a config option 'use-gpsd' to allow disabling the use of
+    gpsd location info.
+  * Update to faup1090 from dump1090-fa 3.7.0
+
+ -- Oliver Jowett <oliver@mutability.co.uk>  Fri, 22 Mar 2019 15:59:09 +0000
+
 piaware (3.6.3) stable; urgency=medium
 
   * Avoid rewriting the cached receiver location frequently when using a
