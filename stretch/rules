@@ -43,6 +43,10 @@ check_versions:
 configure_tcllauncher:
 	cd tcllauncher && autoconf -f && ./configure --with-tcl=/usr/lib/tcl8.6
 
+build_dump1090:
+
+clean_dump1090:
+
 install_dump1090:
 	install -d $(CURDIR)/debian/piaware/usr/lib/piaware/helpers
 	ln -sf /usr/local/bin/faup1090 $(CURDIR)/debian/piaware/usr/lib/piaware/helpers/faup1090
