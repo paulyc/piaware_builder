@@ -51,10 +51,13 @@ fi
 mkdir -p $OUTDIR
 
 clone_or_update https://github.com/paulyc/piaware.git master $OUTDIR/piaware
+#clone_or_update https://github.com/flightaware/piaware.git v3.7.1 $OUTDIR/piaware
 
 clone_or_update https://github.com/paulyc/tcllauncher.git master $OUTDIR/tcllauncher
 
 clone_or_update https://github.com/paulyc/mlat-client.git master $OUTDIR/mlat-client
+
+clone_or_update https://github.com/flightaware/dump978.git v3.7.1 $OUTDIR/dump978
 
 # get a copy of cxfreeze and patch it for building on Debian
 case $dist in
